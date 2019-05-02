@@ -1,0 +1,11 @@
+D:\TEAM_QA\AutoQA\AutoQA\bin\Debug\netcoreapp2.2\AutoQA.deps.json
+D:\TEAM_QA\AutoQA\AutoQA\bin\Debug\netcoreapp2.2\AutoQA.runtimeconfig.json
+D:\TEAM_QA\AutoQA\AutoQA\bin\Debug\netcoreapp2.2\AutoQA.runtimeconfig.dev.json
+D:\TEAM_QA\AutoQA\AutoQA\bin\Debug\netcoreapp2.2\AutoQA.dll
+D:\TEAM_QA\AutoQA\AutoQA\bin\Debug\netcoreapp2.2\AutoQA.pdb
+D:\TEAM_QA\AutoQA\AutoQA\obj\Debug\netcoreapp2.2\AutoQA.csprojAssemblyReference.cache
+D:\TEAM_QA\AutoQA\AutoQA\obj\Debug\netcoreapp2.2\AutoQA.csproj.CoreCompileInputs.cache
+D:\TEAM_QA\AutoQA\AutoQA\obj\Debug\netcoreapp2.2\AutoQA.AssemblyInfoInputs.cache
+D:\TEAM_QA\AutoQA\AutoQA\obj\Debug\netcoreapp2.2\AutoQA.AssemblyInfo.cs
+D:\TEAM_QA\AutoQA\AutoQA\obj\Debug\netcoreapp2.2\AutoQA.dll
+D:\TEAM_QA\AutoQA\AutoQA\obj\Debug\netcoreapp2.2\AutoQA.pdb
