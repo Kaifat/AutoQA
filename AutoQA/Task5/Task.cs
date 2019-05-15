@@ -6,9 +6,9 @@ namespace AutoQA.Task5
 {
     class Task
     {
-        public string Description { get; set; }
-        public Priority Priority { get; set; }
-        public Complexity Complexity { get; set; }
+        public string Description;
+        public Priority Priority;
+        public Complexity Complexity;
         public int Time
         {
             get

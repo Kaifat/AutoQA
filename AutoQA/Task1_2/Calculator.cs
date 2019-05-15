@@ -1,30 +1,4 @@
-﻿using AutoQA.Task1_2;
-using System;
-
-namespace AutoQA.Helper
-{
-    public static class Geometry {
-        public static bool DoesFit(this Object obj, Object obj2) {
-            if (obj is Circle && obj2 is Square)
-            {
-                Circle circle = (Circle) obj;
-                Square square = (Square) obj2;
-
-                return circle.Radius <= square.SideLength / 2;
-            }
-
-            if (obj is Square && obj2 is Circle)
-            {
-                Square square = (Square) obj;
-                Circle circle = (Circle) obj2;
-
-                return circle.Radius * 2 >= square.SideLength * Math.Sqrt(2);
-            }
-
-            return false;
-        }
-    }
-}
+﻿using System;
 
 namespace AutoQA.Task1_2
 {
@@ -33,33 +7,37 @@ namespace AutoQA.Task1_2
     { 
         public static void Calculate()
         {
-            double radius;
-            double sideLength;
+            double radius = 0;
+            double sideLength = 0;
+            int tries = 0;
 
-            while (true)
+            while (tries < 10)
             {
                 Console.WriteLine("Please, enter circle radius: ");
-                if (double.TryParse(Console.ReadLine(), out radius))
+                if (double.TryParse(Console.ReadLine(), out radius) && radius > 0)
                 {
+                    tries = 0;
                     break;
                 }
                 else
                 {
+                    tries++;
                     Console.WriteLine("The value is incorrect, please, try again");
                 }
             }          
 
-            while (true)
+            while (tries < 10)
             {
                 Console.WriteLine("Please, enter square side length: ");
 
-                if (double.TryParse(Console.ReadLine(), out sideLength))
-
+                if (double.TryParse(Console.ReadLine(), out sideLength) && sideLength > 0)
                 {
+                    tries = 0;
                     break;
                 }
                 else
                 {
+                    tries++;
                     Console.WriteLine("The value is incorrect, please, try again");
                 }
             }
