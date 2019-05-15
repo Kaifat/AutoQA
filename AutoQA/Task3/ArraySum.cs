@@ -12,38 +12,44 @@ namespace AutoQA.Task3
 
         public void SumItems()
         {
-            int sum;
+            int sum = 0;
+            int tries = 0;
 
-            while (true)
+            while (tries < 10)
             {
                 Console.WriteLine("Please, enter integer 'FROM' value ");
                 if (int.TryParse(Console.ReadLine(), out this.from))
                 {
+                    tries = 0;
                     break;
                 }
                 else
                 {
+                    tries++;
                     Console.WriteLine("The value is incorrect, please, try again");
                 }
             }
 
-            while (true)
+            while (tries < 10)
             {
                 Console.WriteLine("Please, enter integer 'TO' value ");
                 if (int.TryParse(Console.ReadLine(), out this.to))
                 {
                     if (this.to >= (this.from + minimalRange))
                     {
+                        tries = 0;
                         break;
                     }
                     else
                     {
                         Console.WriteLine($"The range is too small, please, enter value bigger or equals to {this.from + minimalRange}");
+                        tries++;
                         continue;
                     }
                 }
                 else
                 {
+                    tries++;
                     Console.WriteLine("The value is incorrect, please, try again");
                 }
             }

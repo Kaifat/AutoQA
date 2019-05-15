@@ -7,10 +7,10 @@ namespace AutoQA
         static void Main(string[] args)
         {
             //Task1_2.Calculator.Calculate();
-            //new Task3.ArraySum().SumItems();
+            new Task3.ArraySum().SumItems();
             //Task4.Polindrome.CheckPolindrome();
             //Task5.TaskList.ProcessTasks();
-            Task6.Illumination.ShowGarlands();
+            //Task6.Illumination.ShowGarlands();
 
         }
     }
