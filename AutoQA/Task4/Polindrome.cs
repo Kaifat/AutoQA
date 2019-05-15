@@ -8,17 +8,19 @@ namespace AutoQA.Task4
     {
         public static void CheckPolindrome()
         {
-            string enteredWord;
+            string enteredWord = "";
+            int tries = 0;
 
-            while (true)
+            while (tries < 10)
             {
                 Console.Write("Please enter you word: ");
                 enteredWord = Convert.ToString(Console.ReadLine());
                 bool spaceExists = enteredWord.Contains(" ");
 
-                if (spaceExists)
+                if (spaceExists || enteredWord.Length == 0)
                 {
-                    Console.WriteLine("It should be only one word without spaces");
+                    tries++;
+                    Console.WriteLine("It should be one word without spaces");
                 }
                 else
                 {
