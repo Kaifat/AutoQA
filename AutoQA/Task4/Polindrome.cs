@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AutoQA.Task4
 {
@@ -8,37 +7,21 @@ namespace AutoQA.Task4
     {
         public static void CheckPolindrome()
         {
-            string enteredWord = "";
-            int tries = 0;
+            string enteredString = ConsoleReaderHelper.ReadStringValue();
 
-            while (tries < 10)
-            {
-                Console.Write("Please enter you word: ");
-                enteredWord = Convert.ToString(Console.ReadLine());
-                bool spaceExists = enteredWord.Contains(" ");
+            string convertedString = Regex.Replace(enteredString, "[^a-zA-Z']", "").ToLower();
 
-                if (spaceExists || enteredWord.Length == 0)
-                {
-                    tries++;
-                    Console.WriteLine("It should be one word without spaces");
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            char[] charsArray = enteredWord.ToCharArray();
+            char[] charsArray = convertedString.ToCharArray();
             Array.Reverse(charsArray);
             string reversedWord = new string(charsArray);
 
-            if (enteredWord == reversedWord)
+            if (convertedString == reversedWord)
             {
-                Console.WriteLine("Word \"" + enteredWord + "\" is a polindrom");
+                Console.WriteLine($"Text \"{enteredString}\" is a polindrom");
             }
             else
             {
-                Console.WriteLine("Word \"" + enteredWord + "\" is not a polindrom");
+                Console.WriteLine($"Text \"{enteredString}\" is not a polindrom");
             }
         }
     }
